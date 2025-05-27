@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Nuvora</title>
+  <link rel="icon" href="nuvora-logo.png" type="image/png" />
+  <style>
+    body {
+      background-color: #161d25;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 190px;
+      height: 190px;
+    }
+
+    .search-bar {
+      margin-top: 220px;
+      margin-bottom: 30px;
+    }
+
+    .search-bar input {
+      padding: 14px;
+      width: 350px;
+      border-radius: 8px;
+      border: none;
+      font-size: 18px;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 90%;
+      max-width: 1300px;
+      margin: 0 auto 40px auto;
+    }
+
+    .game-card {
+      background-color: #1f2a38;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .game-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .game-card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .game-card h2 {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .game-card p {
+      font-size: 0.9rem;
+      margin-top: 6px;
+      min-height: 48px;
+    }
+
+    .game-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 7px 16px;
+      background-color: #556677;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .game-card a:hover {
+      background-color: #7289da;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="nuvora-logo.png" alt="Nuvora Logo" class="logo" />
+
+  <div class="search-bar">
+    <input id="searchInput" type="text" placeholder="Search for a game..." />
+  </div>
+
+  <div class="game-grid" id="gameGrid">
+    <div class="game-card" data-name="valorant">
+      <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d0db663bf28844dcbd744935cdd8c71083e0031c-5600x3150.jpg" alt="Valorant" />
+      <h2>Valorant</h2>
+      <p>Tactical 5v5 shooter by Riot Games. High skill, cool agents.</p>
+      <a href="https://playvalorant.com/" target="_blank">Official Website</a>
+    </div>
+
+    <div class="game-card" data-name="fortnite">
+      <img src="https://cdn1.epicgames.com/offer/fn/FNBR_35-00_C6MS1_EGS_Launcher_KeyArt_FN_Blade_2560x1440_2560x1440-8fd35061502b51f1df276474d28e7f59" alt="Fortnite" />
+      <h2>Fortnite</h2>
+      <p>Popular battle royale with building and fighting.</p>
+      <a href="https://www.epicgames.com/fortnite/de/home" target="_blank">Official Website</a>
+    </div>
+
+    <div class="game-card" data-name="genshin impact">
+      <img src="https://fastcdn.hoyoverse.com/content-v2/plat/155813/dae03c619499ac36c13a0f6316999e3e_7640076682718645514.jpeg" alt="Genshin Impact" />
+      <h2>Genshin Impact</h2>
+      <p>Open-world action RPG with anime-style graphics and elemental combat.</p>
+      <a href="https://genshin.hoyoverse.com/en" target="_blank">Official Site</a>
+    </div>
+
+    <div class="game-card" data-name="rocket league">
+      <img src="https://cdn1.epicgames.com/offer/9773aa1aa54f4f7b80e44bef04986cea/EGS_RocketLeague_PsyonixLLC_S3_2560x1440-18eac9b5df1028fdcd5bad480ab6b085" alt="Rocket League" />
+      <h2>Rocket League</h2>
+      <p>High-powered hybrid of arcade-style soccer and vehicular mayhem.</p>
+      <a href="https://www.rocketleague.com/" target="_blank">Official Site</a>
+    </div>
+
+    <div class="game-card" data-name="league of legends">
+      <img src="https://images.mein-mmo.de/medien/2019/07/lol.jpg" alt="League of Legends" />
+      <h2>League of Legends</h2>
+      <p>Popular MOBA with strategic team-based gameplay and massive esports scene.</p>
+      <a href="https://www.leagueoflegends.com/" target="_blank">Official Site</a>
+    </div>
+
+    <div class="game-card" data-name="gta v">
+      <img src="https://cdn1.epicgames.com/offer/b0cd075465c44f87be3b505ac04a2e46/EGS_GrandTheftAutoVEnhanced_RockstarNorth_S1_2560x1440-906d8ae76a91aafc60b1a54c23fab496" alt="GTA V" />
+      <h2>GTA V</h2>
+      <p>Open-world action game with endless possibilities and story missions.</p>
+      <a href="https://www.rockstargames.com/gta-v" target="_blank">Official Site</a>
+    </div>
+
+    <div class="game-card" data-name="the witcher 3">
+      <img src="https://cdn1.epicgames.com/offer/14ee004dadc142faaaece5a6270fb628/EGS_TheWitcher3WildHuntCompleteEdition_CDPROJEKTRED_S1_2560x1440-82eb5cf8f725e329d3194920c0c0b64f" alt="The Witcher 3" />
+      <h2>The Witcher 3</h2>
+      <p>Epic RPG adventure with rich story and open-world exploration.</p>
+      <a href="https://thewitcher.com/en/witcher3" target="_blank">Official Site</a>
+    </div>
+
+    <div class="game-card" data-name="roblox">
+      <img src="https://images.rbxcdn.com/d572cc8714e0ec771ad8268977880ddf.png" alt="Roblox" />
+      <h2>Roblox</h2>
+      <p>Massive online platform for creating and playing games made by users.</p>
+      <a href="https://www.roblox.com/" target="_blank">Official Website</a>
+    </div>
+
+    <div class="game-card" data-name="apex legends">
+      <img src="https://gaming-cdn.com/images/news/articles/9130/cover/1000x563/staffel-23-von-apex-legends-bringt-die-ruckkehr-der-klassischen-waffen-und-fahigkeiten-cover672a4833f1b62.jpg" alt="Apex Legends" />
+      <h2>Apex Legends</h2>
+      <p>Fast-paced battle royale with unique heroes and tactical gameplay.</p>
+      <a href="https://www.ea.com/games/apex-legends" target="_blank">Official Site</a>
+    </div>
+
+    <div class="game-card" data-name="splitgate 2">
+      <img src="https://image.api.playstation.com/vulcan/ap/rnd/202502/2719/61ad0af45482e77178a63cf0a013b09c4b3790ba7bd2228c.jpg" alt="Splitgate 2" />
+      <h2>Splitgate 2</h2>
+      <p>Shoot and portals in fast arena action.</p>
+      <a href="https://www.splitgate.com/de/" target="_blank">Official Website</a>
+    </div>
+
+    <div class="game-card" data-name="call of duty">
+      <img src="https://images.cgames.de/images/gsgp/290/call-of-duty-black-ops-cold-war-2020_6100922.jpg" alt="Call of Duty" />
+      <h2>Call of Duty</h2>
+      <p>Popular shooter with intense multiplayer modes.</p>
+      <a href="https://www.callofduty.com/" target="_blank">Official Website</a>
+    </div>
+
+    <div class="game-card" data-name="minecraft">
+      <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft.jpg" alt="Minecraft" />
+      <h2>Minecraft</h2>
+      <p>Creative sandbox game where you can build, explore, and survive.</p>
+      <a href="https://www.minecraft.net/" target="_blank">Official Website</a>
+    </div>
+
+    <div class="game-card" data-name="war thunder">
+      <img src="https://warthunder.com/i/opengraph-wt.jpg" alt="War Thunder" />
+      <h2>War Thunder</h2>
+      <p>Realistic military vehicle MMO with planes, tanks, and ships.</p>
+      <a href="https://warthunder.com/" target="_blank">Official Website</a>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const gameCards = document.querySelectorAll('.game-card');
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+
+      gameCards.forEach(card => {
+        const name = card.getAttribute('data-name').toLowerCase();
+        if (name.startsWith(filter)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
